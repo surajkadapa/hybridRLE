@@ -45,6 +45,6 @@ void generate_image_avx2(const char *filename) {
 }
 
 int main() {
-    generate_image_avx2("image_avx_random.pgm");
+    generate_image_avx2("images/image_avx_random.pgm");
     return 0;
 }
