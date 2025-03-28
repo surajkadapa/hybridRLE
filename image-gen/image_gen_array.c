@@ -12,8 +12,8 @@
 #include <stdio.h>
 #include <stdint.h>
 
-#define WIDTH 4096
-#define HEIGHT 4096
+#define WIDTH 1024
+#define HEIGHT 1024
 
 void generate_image(const char *filename){
   FILE *file = fopen(filename, "wb");
