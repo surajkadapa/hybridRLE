@@ -326,7 +326,7 @@ size_t text_size;
     free(bwt_data);
 
     // Compress MTF data (size + 1)
-    FILE *compressed = fopen("compressed_huffmann_frank.bin", "wb");
+    FILE *compressed = fopen("compressed_huffmann_frank(1).bin", "wb");
     fwrite(&text_size, sizeof(size_t), 1, compressed);  // Original size
     fwrite(&orig_index, sizeof(int), 1, compressed);    // BWT index
     huffman_compress(mtf_data, text_size + 1, compressed); // Include sentinel
@@ -336,7 +336,7 @@ size_t text_size;
     printf("Compression successful.\n");
 
     // ----------------- Decompression -----------------
-  FILE *comp_input = fopen("compressed_huffmann_frank.bin", "rb");
+  FILE *comp_input = fopen("compressed_huffmann_frank(1).bin", "rb");
     fread(&text_size, sizeof(size_t), 1, comp_input);
     fread(&orig_index, sizeof(int), 1, comp_input);
 
